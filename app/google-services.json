@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "32762790973",
+    "project_id": "phsapps-91b7b",
+    "storage_bucket": "phsapps-91b7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32762790973:android:b9c0ecddbb6068d7511654",
+        "android_client_info": {
+          "package_name": "com.ba.phsapps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlBDQZTgIQwAuDW3MDfiGxXmmWDPSEe5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
