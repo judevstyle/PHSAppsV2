@@ -39,6 +39,12 @@ class IntroFragment :BaseFragment(){
 
         }
 
+        binding.registerAction.setOnClickListener {
+
+            findNavController()
+                .navigate(R.id.action_introFragment_to_registerFragment)
+
+        }
 
     }
 

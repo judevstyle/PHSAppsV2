@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_main"/>
+
+
+
+        </FrameLayout>
+
+
+        <com.ssoft.common.widget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:text="รายชื่อศูนย์บริการสาธารณสุข"/>
+
+        <com.ssoft.common.widget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="และโรงพยาบาลในเขตพื้นที่จตุจักร"/>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="191"
+                    android:textColor="@color/red"
+                    android:textSize="26sp"
+                    android:gravity="center"/>
+                <com.ssoft.common.widget.SingleLineTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="เหตุด่วน เหตุร้าย"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="199"
+                    android:textColor="@color/red"
+                    android:textSize="26sp"
+                    android:gravity="center"/>
+                <com.ssoft.common.widget.SingleLineTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ไฟไหม้ ดับเพลิง"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1669"
+                    android:textColor="@color/red"
+                    android:textSize="26sp"
+                    android:gravity="center"/>
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="หน่วยแพทย์ฉุกเฉิน\n สถาบันการแพทย์"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1554"
+                    android:textColor="@color/red"
+                    android:textSize="26sp"
+                    android:gravity="center"/>
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="หน่วยแพทย์ฉุกเฉิน\n วชิรพยาบาล"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/rv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            tools:listitem="@layout/item_hospital"
+            android:layout_weight="1"/>
+
+
+
+
+        <com.ssoft.common.widget.CustomButton
+            android:paddingEnd="52dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:id="@+id/backAction"
+            android:paddingStart="52dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="46dp"
+            android:background="@drawable/btn_primary"
+            android:text="กลับ"/>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

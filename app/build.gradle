@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 
     id 'com.google.gms.google-services'
 
@@ -89,6 +90,9 @@ dependencies {
 
 //    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
 
+    //permission
+    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.1"
+    kapt "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.1"
 
 
     testImplementation 'junit:junit:4.13.2'

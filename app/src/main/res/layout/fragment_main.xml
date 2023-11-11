@@ -38,7 +38,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="XXXXXX"
+                    android:text=""
+                    android:id="@+id/nameTV"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     app:font_name="kanitBold" />
@@ -47,6 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="อายุ 50"
+                    android:id="@+id/ageTV"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -54,6 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
+                    android:id="@+id/levelTV"
                     android:text="ระดับความเสี่ยง : ระดับ 1"
                     android:textColor="@color/white"
                  />
@@ -95,12 +98,13 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:id="@+id/menu1"
                 android:layout_height="match_parent">
 
 
                 <ImageView
                     android:layout_margin="16dp"
-
+                    android:id="@+id/menuimg1"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:src="@drawable/ic_menu_history"
@@ -125,6 +129,8 @@
 
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:id="@+id/menu2"
+
                     android:src="@drawable/ic_menu_hospital"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -156,6 +162,7 @@
 
 
                 <ImageView
+                    android:id="@+id/menu3"
                     android:layout_margin="16dp"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -173,6 +180,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:id="@+id/menu4"
                 android:layout_height="match_parent">
 
 
@@ -212,6 +220,7 @@
                 android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:id="@+id/sosAction"
                 android:layout_height="wrap_content">
 
                 <ImageView
@@ -326,6 +335,17 @@
 
 
     </LinearLayout>
+
+    <ImageView
+        android:padding="8dp"
+        android:id="@+id/settingAction"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/baseline_settings_24"
+        app:tint="@color/white"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

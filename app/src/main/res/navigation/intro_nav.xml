@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/intro_nav"
     app:startDestination="@id/introFragment">
 
@@ -11,6 +12,9 @@
         <action
             android:id="@+id/action_introFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -23,5 +27,54 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.ba.phsapps.view.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_userUnderFragment"
+            app:destination="@id/userUnderFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_userHistoryFragment"
+            app:destination="@id/userHistoryFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_medicalFragment"
+            app:destination="@id/medicalFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userUnderFragment"
+        android:name="com.ba.phsapps.view.userUnder.UserUnderFragment"
+        android:label="UserUnderFragment" >
+        <action
+            android:id="@+id/action_userUnderFragment_to_userHistoryFragment"
+            app:destination="@id/userHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userHistoryFragment"
+        android:name="com.ba.phsapps.view.history.UserHistoryFragment"
+        android:label="UserHistoryFragment" />
+    <fragment
+        android:id="@+id/medicalFragment"
+        android:name="com.ba.phsapps.view.medical.MedicalFragment"
+        android:label="MedicalFragment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.ba.phsapps.view.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.ba.phsapps.view.resetPassword.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ba.phsapps.view.register.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

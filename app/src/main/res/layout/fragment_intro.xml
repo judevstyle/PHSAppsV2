@@ -69,6 +69,7 @@
 
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="160dp"
+            android:id="@+id/registerAction"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
             android:layout_width="match_parent"

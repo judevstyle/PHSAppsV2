@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_main" />
+
+
+            </FrameLayout>
+
+
+            <com.ssoft.common.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="แอปพลิเคชันสนับสนุน"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.ssoft.common.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:text="การช่วยเหลือด้านสาธารณสุขสำหรับประชาชนผู้สูงวัย"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ประเภทผู้ใช้งาน" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/typeTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusTopEnd="@dimen/dimen8"
+                    app:boxCornerRadiusTopStart="@dimen/dimen8"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+                    <AutoCompleteTextView
+
+                        android:id="@+id/typeAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:text="กรุณาเลือกรถขนส่ง" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="สถานพยาบาลปฐมภูมิ" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/hosTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusTopEnd="@dimen/dimen8"
+                    app:boxCornerRadiusTopStart="@dimen/dimen8"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+                    <AutoCompleteTextView
+
+                        android:id="@+id/hosAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:text="กรุณาเลือกรถขนส่ง" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="เลขบัตรประชาชน" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/idCardET"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="คำนำหน้า" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titleTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusTopEnd="@dimen/dimen8"
+                    app:boxCornerRadiusTopStart="@dimen/dimen8"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+                    <AutoCompleteTextView
+
+                        android:id="@+id/titleAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:text="กรุณาเลือก" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ชื่อ" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/fnameET"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="นามสกุล" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/lnameET"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Email" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/mailET"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="เพศ" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/genderTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusTopEnd="@dimen/dimen8"
+                    app:boxCornerRadiusTopStart="@dimen/dimen8"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+                    <AutoCompleteTextView
+
+                        android:id="@+id/genderAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:text="กรุณาเลือกรถขนส่ง" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="เบอร์โทรศัพท์ติดต่อ" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/telET"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:inputType="number"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ที่อยู่" />
+
+                <com.ssoft.common.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+
+            <com.ssoft.common.widget.CustomEditText
+                android:id="@+id/addressET"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:gravity="start|top"
+                android:padding="@dimen/dimen8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="รหัสผ่าน" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/passwordET"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="รหัสผ่านยืนยัน" />
+
+                    <com.ssoft.common.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+
+                <com.ssoft.common.widget.CustomEditText
+                    android:id="@+id/passCFET"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customTextView37">
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+
+                </com.ssoft.common.widget.CustomEditText>
+            </LinearLayout>
+
+            <com.ssoft.common.widget.CustomButton
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/registerAction"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_input"
+                android:backgroundTint="@color/primary"
+                android:text="ลงทะเบียน"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
