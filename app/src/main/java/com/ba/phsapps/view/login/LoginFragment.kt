@@ -1,10 +1,12 @@
 package com.ba.phsapps.view.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.ba.phsapps.MainActivity
 import com.ba.phsapps.R
 import com.ba.phsapps.databinding.FragmentLoginBinding
 import com.google.gson.Gson
@@ -32,7 +34,12 @@ class LoginFragment : BaseFragment() {
         super.onViewReady(view, savedInstanceState)
 
         binding.loginAction.setOnClickListener {
-            viewModel.login("1111335485", "1234")
+
+
+
+//            viewModel.login("1012300448789", "123456")
+
+            viewModel.login(binding.userET.text.toString().trim(),binding.passET.text.toString().trim())
 
 //            findNavController()
 //                .navigate(R.id.action_loginFragment_to_mainFragment)
@@ -67,12 +74,15 @@ class LoginFragment : BaseFragment() {
 
                     SharedPreferenceUtil.updateUser(requireContext(), Gson().toJson(state.data))
                     hideDialog()
-                    findNavController()
-                        .navigate(R.id.action_loginFragment_to_mainFragment)
+                    startActivity(Intent(requireContext(),MainActivity::class.java))
+                    requireActivity().finish()
 
                 }
 
 
+                else -> {
+
+                }
             }
 
 

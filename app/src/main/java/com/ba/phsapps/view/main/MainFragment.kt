@@ -16,6 +16,7 @@ import com.google.gson.Gson
 import com.ssoft.common.BaseFragment
 import com.ssoft.common.util.SharedPreferenceUtil
 import androidx.annotation.NonNull
+import com.ba.phsapps.view.login.AuthActivity
 import com.ssoft.common.util.LogUtil
 
 import permissions.dispatcher.NeedsPermission
@@ -66,7 +67,7 @@ class MainFragment : BaseFragment() {
 
         binding.nameTV.text = user.uName
         binding.levelTV.text = "ระดับความเสี่ยง : ${user.uStatus ?: "-"}"
-        binding.ageTV.text = "อายุ : -"
+        binding.ageTV.text = "อายุ : ${user.uAge}"
 
 
         if (user.uRole == 1){
@@ -112,6 +113,14 @@ class MainFragment : BaseFragment() {
 
         binding.sosAction.setOnClickListener {
             callPhoneWithPermissionCheck()
+
+        }
+
+        binding.logoutAction.setOnClickListener {
+
+            SharedPreferenceUtil.clearAll(requireContext())
+            startActivity(Intent(requireContext(), AuthActivity::class.java))
+            requireActivity().finish()
 
         }
 //

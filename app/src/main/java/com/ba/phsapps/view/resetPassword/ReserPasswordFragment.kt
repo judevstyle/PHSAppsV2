@@ -80,6 +80,7 @@ class ResetPasswordFragment:BaseFragment() {
                 }
                 is LoginUi.onSuccess->{
 
+                    hideDialog()
                     showToast("บันทึกข้อมูลเรียบร้อย")
 
                     findNavController()

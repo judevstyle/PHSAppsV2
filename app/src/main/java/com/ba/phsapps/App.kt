@@ -1,6 +1,9 @@
 package com.ba.phsapps
 
+import android.app.Activity
 import android.app.Application
+import android.content.pm.ActivityInfo
+import android.os.Bundle
 import com.ba.phsapps.network.HttpBaseConnect
 import com.ba.phsapps.network.api.ServiceAPI
 import com.ba.phsapps.repository.LoginImpl
@@ -14,25 +17,25 @@ import com.ba.phsapps.view.register.RegisterViewModels
 import com.ba.phsapps.view.resetPassword.ResetPasswordViewModels
 import com.ba.phsapps.view.userUnder.UserUnderViewModel
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.ktx.messaging
 import org.koin.android.ext.android.get
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
 import org.koin.android.viewmodel.dsl.viewModel
-class App : Application() {
+class App : Application(), Application.ActivityLifecycleCallbacks {
 
     override fun onCreate() {
         super.onCreate()
 
-
-        Firebase.messaging.subscribeToTopic("weather")
+        Firebase.messaging.subscribeToTopic("phs")
             .addOnCompleteListener { task ->
                 var msg = "Subscribed"
                 if (!task.isSuccessful) {
                     msg = "Subscribe failed"
                 }
-                Log.d(TAG, msg)
-                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+//                Log.d(TAG, msg)
+//                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
             }
 
         initKoin()
@@ -95,6 +98,30 @@ class App : Application() {
         }
 
 
+    }
+
+
+    override fun onActivityCreated(p0: Activity, p1: Bundle?) {
+        p0.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
+    }
+
+    override fun onActivityStarted(p0: Activity) {
+    }
+
+    override fun onActivityResumed(p0: Activity) {
+    }
+
+    override fun onActivityPaused(p0: Activity) {
+    }
+
+    override fun onActivityStopped(p0: Activity) {
+    }
+
+    override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
+    }
+
+    override fun onActivityDestroyed(p0: Activity) {
     }
 
 }

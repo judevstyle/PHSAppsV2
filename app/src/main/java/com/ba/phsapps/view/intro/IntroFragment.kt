@@ -35,14 +35,13 @@ class IntroFragment :BaseFragment(){
         binding.loginAction.setOnClickListener {
 
             findNavController()
-                .navigate(R.id.action_introFragment_to_loginFragment)
-
+                .navigate(R.id.action_introFragment2_to_loginFragment2)
         }
 
         binding.registerAction.setOnClickListener {
 
             findNavController()
-                .navigate(R.id.action_introFragment_to_registerFragment)
+                .navigate(R.id.action_introFragment2_to_registerFragment2)
 
         }
 

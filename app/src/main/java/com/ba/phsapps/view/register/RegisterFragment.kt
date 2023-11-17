@@ -1,5 +1,6 @@
 package com.ba.phsapps.view.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.ba.phsapps.MainActivity
 import com.ba.phsapps.R
 import com.ba.phsapps.databinding.FragmentRegisterBinding
 import com.ba.phsapps.view.login.LoginUi
@@ -19,6 +21,7 @@ import com.taitos.nup.common.EventObserver
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class RegisterFragment:BaseFragment() {
+
     private lateinit var binding: FragmentRegisterBinding
 
     val viewModel: RegisterViewModels by viewModel()
@@ -190,8 +193,8 @@ class RegisterFragment:BaseFragment() {
 
                     SharedPreferenceUtil.updateUser(requireContext(), Gson().toJson(state.data))
                     hideDialog()
-                    findNavController()
-                        .navigate(R.id.action_registerFragment_to_mainFragment)
+                    startActivity(Intent(requireContext(), MainActivity::class.java))
+                    requireActivity().finish()
 
                 }
 
