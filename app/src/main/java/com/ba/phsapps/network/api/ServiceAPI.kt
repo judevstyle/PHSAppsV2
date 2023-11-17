@@ -8,6 +8,7 @@ import com.ba.phsapps.data.models.UserModels
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.PATCH
 import retrofit2.http.POST
 import retrofit2.http.Path
 
@@ -19,10 +20,13 @@ interface ServiceAPI {
         @Path("pass")pass:String
         ): CallbackRespone<UserModels>
 
-    @GET("User/SearchUser/{user}")
+    @GET("User/SearchUser/{uIDcard}")
     suspend fun searchUserIDcard(
-        @Path("user")user:String,
-    ): UserModels
+        @Path("uIDcard")uIDcard:String,
+    ): CallbackRespone<UserModels>
+
+
+
 
     @GET("User/UserAll")
     suspend fun userAll(
@@ -31,8 +35,8 @@ interface ServiceAPI {
 
     @GET("User/GetServiceUser/{id}")
     suspend fun getServiceUser(
-        @Path("id")id:Int,
-    ): List<UserModels>
+        @Path("id")id:String,
+    ): CallbackRespone<UserModels>
 
     @GET("User/GetUserforHealth/{id}")
     suspend fun getServiceUnderUser(
@@ -76,11 +80,36 @@ interface ServiceAPI {
         @Field("uAddress")uAddress:String,
         @Field("uPosition")uPosition:String,
         @Field("uSex")uSex:String,
+        @Field("uAge")age:String,
         @Field("uMobile")uMobile:String,
         @Field("uPhone")uPhone:String,
         @Field("uMail")uMail:String,
         @Field("uPass")uPass:String,
         ):CallbackRespone<UserModels>
+
+
+    @FormUrlEncoded
+    @PATCH("User/UpdateUser")
+    suspend fun updateProfile(
+        @Field("uIDCard")uIDCard:String,
+        @Field("userviceCenterID")userviceCenterID:String,
+        @Field("uRole")uRole:String,
+        @Field("uTitle")uTitle:String,
+        @Field("uName")uName:String,
+        @Field("uAddress")uAddress:String,
+        @Field("uPosition")uPosition:String,
+        @Field("uSex")uSex:String,
+        @Field("uAge")age:String,
+        @Field("uMobile")uMobile:String,
+        @Field("uPhone")uPhone:String,
+        @Field("uMail")uMail:String,
+        @Field("uPass")uPass:String,
+
+        ):CallbackRespone<UserModels>
+
+
+
+
 
 
     @POST("HealthHistory/Save")

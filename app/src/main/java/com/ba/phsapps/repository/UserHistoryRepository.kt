@@ -18,8 +18,12 @@ interface UserHistoryRepository {
     ):CallbackRespone<List<ServiceCenter>>
 
     suspend fun getServiceUnderUser(
-        @Path("id")id:String,
+        id:String,
     ):CallbackRespone<List<UserModels>>
+
+    suspend fun searchUserIDcard(
+        uIDcard:String,
+    ): CallbackRespone<UserModels>
 
 
 }
@@ -40,6 +44,10 @@ class UserHistoryImpl(val serviceAPI: ServiceAPI):UserHistoryRepository{
     override suspend fun getServiceUnderUser(id: String): CallbackRespone<List<UserModels>> {
 
         return serviceAPI.getServiceUnderUser(id)
+    }
+
+    override suspend fun searchUserIDcard(uIDcard: String): CallbackRespone<UserModels> {
+        return serviceAPI.searchUserIDcard(uIDcard)
     }
 
 

@@ -16,6 +16,7 @@ import com.google.gson.Gson
 import com.ssoft.common.BaseFragment
 import com.ssoft.common.util.SharedPreferenceUtil
 import androidx.annotation.NonNull
+import com.ssoft.common.util.LogUtil
 
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.RuntimePermissions
@@ -34,17 +35,34 @@ class MainFragment : BaseFragment() {
 
     override fun onViewReady(view: View, savedInstanceState: Bundle?) {
         super.onViewReady(view, savedInstanceState)
+        binding.settingAction1.setOnClickListener {
 
+            findNavController()
+                .navigate(R.id.action_mainFragment_to_profileFragment)
+
+        }
         initView()
+        requestNotificationWithPermissionCheck()
 
 
     }
+
+    @SuppressLint("MissingPermission")
+    @NeedsPermission(Manifest.permission.POST_NOTIFICATIONS)
+    fun requestNotification() {
+        LogUtil.showLogError("NeedsPermission", "on")
+
+    }
+
 
     fun initView(){
 
        val str =  SharedPreferenceUtil.getUser(requireContext())
 
         val user = Gson().fromJson<UserModels>(str,UserModels::class.java)
+
+
+
 
         binding.nameTV.text = user.uName
         binding.levelTV.text = "ระดับความเสี่ยง : ${user.uStatus ?: "-"}"
@@ -96,11 +114,11 @@ class MainFragment : BaseFragment() {
             callPhoneWithPermissionCheck()
 
         }
-
-        binding.settingAction.setOnClickListener {
-
-
-        }
+//
+//        binding.settingAction.setOnClickListener {
+//
+//
+//        }
 
 
     }

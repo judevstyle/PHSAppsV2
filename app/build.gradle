@@ -87,6 +87,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+//    implementation("com.google.firebase:firebase-messaging")
+    implementation 'com.google.firebase:firebase-messaging'
 
 //    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
 

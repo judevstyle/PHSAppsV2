@@ -25,11 +25,31 @@ interface LoginRepository {
         uAddress: String,
         uPosition: String,
         uSex: String,
+        age:String,
         uMobile: String,
         uPhone: String,
         uMail: String,
         uPass: String,
     ): CallbackRespone<UserModels>
+
+
+    suspend fun profileUpdate(
+        uIDCard: String,
+        userviceCenterID: String,
+        uRole: String,
+        uTitle: String,
+        uName: String,
+        uAddress: String,
+        uPosition: String,
+        uSex: String,
+        age:String,
+        uMobile: String,
+        uPhone: String,
+        uMail: String,
+        uPass: String,
+
+        ): CallbackRespone<UserModels>
+
 
     suspend fun serviceCenter(
     ):CallbackRespone<List<ServiceCenter>>
@@ -56,12 +76,33 @@ class LoginImpl(val serviceAPI: ServiceAPI) : LoginRepository {
         uAddress: String,
         uPosition: String,
         uSex: String,
+        age:String,
         uMobile: String,
         uPhone: String,
         uMail: String,
         uPass: String
     ): CallbackRespone<UserModels> {
-        return serviceAPI.register(uIDCard, userviceCenterID, uRole, uTitle, uName, uAddress, uPosition, uSex, uMobile, uPhone, uMail, uPass)
+        return serviceAPI.register(uIDCard, userviceCenterID, uRole, uTitle, uName, uAddress, uPosition, uSex,age, uMobile, uPhone, uMail, uPass)
+    }
+
+    override suspend fun profileUpdate(
+        uIDCard: String,
+        userviceCenterID: String,
+        uRole: String,
+        uTitle: String,
+        uName: String,
+        uAddress: String,
+        uPosition: String,
+        uSex: String,
+        age: String,
+        uMobile: String,
+        uPhone: String,
+        uMail: String,
+        uPass: String,
+
+        ): CallbackRespone<UserModels> {
+        return serviceAPI.updateProfile(uIDCard, userviceCenterID, uRole, uTitle, uName, uAddress, uPosition, uSex, age, uMobile, uPhone, uMail      ,  uPass
+        )
     }
 
     override suspend fun serviceCenter(): CallbackRespone<List<ServiceCenter>> {

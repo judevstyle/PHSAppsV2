@@ -20,6 +20,8 @@ data class UserModels(
     val uTitle: Int,
     val userviceCenterID: Int,
     val roleNameTh: String,
-    val serviceName: String
+    val serviceName: String,
+    val uAge: Int
+
 
 )

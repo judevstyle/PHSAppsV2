@@ -144,6 +144,7 @@ class RegisterFragment:BaseFragment() {
                 ,binding.mailET.text.toString()
                 ,binding.passwordET.text.toString()
                 ,binding.passCFET.text.toString()
+                ,binding.ageET.text.toString()
 
             )
 

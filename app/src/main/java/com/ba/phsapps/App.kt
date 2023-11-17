@@ -13,6 +13,7 @@ import com.ba.phsapps.view.medical.ServiceCenterViewModel
 import com.ba.phsapps.view.register.RegisterViewModels
 import com.ba.phsapps.view.resetPassword.ResetPasswordViewModels
 import com.ba.phsapps.view.userUnder.UserUnderViewModel
+import com.google.firebase.ktx.Firebase
 import org.koin.android.ext.android.get
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -22,6 +23,17 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
+
+        Firebase.messaging.subscribeToTopic("weather")
+            .addOnCompleteListener { task ->
+                var msg = "Subscribed"
+                if (!task.isSuccessful) {
+                    msg = "Subscribe failed"
+                }
+                Log.d(TAG, msg)
+                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+            }
 
         initKoin()
 

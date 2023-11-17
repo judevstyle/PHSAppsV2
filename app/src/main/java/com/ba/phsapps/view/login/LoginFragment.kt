@@ -32,7 +32,7 @@ class LoginFragment : BaseFragment() {
         super.onViewReady(view, savedInstanceState)
 
         binding.loginAction.setOnClickListener {
-            viewModel.login("1012300448789", "123456")
+            viewModel.login("1111335485", "1234")
 
 //            findNavController()
 //                .navigate(R.id.action_loginFragment_to_mainFragment)
