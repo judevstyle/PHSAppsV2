@@ -37,7 +37,7 @@ class LoginFragment : BaseFragment() {
 
 
 
-//            viewModel.login("1012300448789", "123456")
+//
 
             viewModel.login(binding.userET.text.toString().trim(),binding.passET.text.toString().trim())
 

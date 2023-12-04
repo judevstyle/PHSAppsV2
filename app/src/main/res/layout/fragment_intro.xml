@@ -125,6 +125,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:background="#8F000000"
+        android:visibility="gone"
         android:textSize="42sp"
         android:text="ผลงานของทีม SSoft Joo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

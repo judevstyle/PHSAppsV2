@@ -352,6 +352,7 @@
         android:src="@drawable/baseline_settings_24"
         app:tint="@color/white"/>
     <com.ssoft.common.widget.CustomTextView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"

@@ -131,6 +131,7 @@
     </LinearLayout>
 
     <com.ssoft.common.widget.CustomTextView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
@@ -138,6 +139,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:background="#8F000000"
+
         android:textSize="42sp"
         android:text="ผลงานของทีม SSoft Joo"/>
 

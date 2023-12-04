@@ -32,14 +32,14 @@
             android:textSize="28sp"
             app:font_name="kanitBold" />
     </LinearLayout>
-    <com.ssoft.common.widget.CustomTextView
-        android:layout_width="match_parent"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:background="#8F000000"
-        android:textSize="42sp"
-        android:text="ผลงานของทีม SSoft Joo"/>
+<!--    <com.ssoft.common.widget.CustomTextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:background="#8F000000"-->
+<!--        android:textSize="42sp"-->
+<!--        android:text="ผลงานของทีม SSoft Joo"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
